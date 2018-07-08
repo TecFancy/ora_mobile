@@ -47,6 +47,8 @@ p.indent {
 
 .text-center { text-align: center; }
 
+.hidden { display: none; }
+
 
 /** Start header area */
 header {
