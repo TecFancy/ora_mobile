@@ -59,7 +59,8 @@ p {
 .module-02 .main .content .mid.bg {
   padding-top: .1rem;
   width: .38rem;
-  height: 16.76rem;
+  /* height: 16.76rem; */
+  height: 10rem;
   background: url("../images/about/module02-icon03.png") no-repeat center center;
   background-size: cover;
 }
@@ -79,13 +80,13 @@ p {
   right: -.05rem;
 }
   .module-02 .main .content .left .item:first-child {
-    top: .9rem;
+    top: .75rem;
   }
   .module-02 .main .content .left .item:nth-child(2) {
-    top: .5rem;
+    top: 0rem;
   }
   .module-02 .main .content .left .item:last-child {
-    top: .15rem;
+    top: -.5rem;
   }
 .module-02 .main .content .right .item {
   left: -.4rem;
@@ -94,10 +95,10 @@ p {
     top: -.15rem;
   }
   .module-02 .main .content .right .item:nth-child(2) {
-    bottom: .7rem;
+    bottom: .5rem;
   }
   .module-02 .main .content .right .item:last-child {
-    bottom: 1.26rem;
+    bottom: .8rem;
   }
 
 .module-02 .main .content .left .item .txt-group,
