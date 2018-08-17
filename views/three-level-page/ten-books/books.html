@@ -1,4 +1,9 @@
 <div class="module module-01">
+  <div class="title">
+    <span class="title-line"></span>
+    <p class="module-title">嘉伟导师十本好书推荐</p>
+    <span class="title-line"></span>
+  </div>
   <div class="main">
     <div class="txt-group">
       <p class="para indent">
@@ -42,7 +47,7 @@
       <div class="item">
         <img src="images/books/book04.png" alt="">
         <div class="des">
-          <p class="book-title">4.《爱情心理学》  作者：罗伯特.J.斯腾伯格</p>
+          <p class="book-title">4.《爱情心理学》 作者：罗伯特.J.斯腾伯格</p>
           <p class="book-des">
             经典作家的经典之作。爱情心理学是研究男女恋爱中的心理现象及其发生与发展规律的科学，即探讨男女在恋爱、婚姻中，爱情的获得及稳固的心理规律，包括恋爱心理和婚姻心理两部分。
           </p>
@@ -108,14 +113,14 @@
 
 
 <script type="text/javascript">
-
   // 动态更换头图图片
-  var changePrefaceImg = $(function (){
+  var changePrefaceImg = $(function () {
     var prefaceImg = $(".preface .banner-img img");
     prefaceImg.attr("src", "images/books/preface.png");
   }());
-
+  // 没问题之后再删掉
   $(document).ready(function () {
+    return;
     // 初始化模块标题
     var insertModuleTitle = $(function () {
       // 请求模块标题 HTML 模板
@@ -123,12 +128,12 @@
         $.ajax({
           type: 'GET',
           url: 'components/module-title/module-title.html',
-          success: function ( dataHTML ) {
-            $( '.module' ).prepend( dataHTML );
-            console.log( 'successed to load module-title.html!' );
+          success: function (dataHTML) {
+            $('.module').prepend(dataHTML);
+            console.log('successed to load module-title.html!');
           },
-          error: function ( error ) {
-            console.log( 'failed to load module-title.html!' );
+          error: function (error) {
+            console.log('failed to load module-title.html!');
           }
         });
       }());
@@ -138,22 +143,22 @@
         $.ajax({
           type: 'GET',
           url: 'data/module-title.json',
-          success: function ( data ) {
-            insertModuleTitle( data );
-            console.log( 'successed to load module-title.json!' );
+          success: function (data) {
+            insertModuleTitle(data);
+            console.log('successed to load module-title.json!');
           },
-          error: function ( error ) {
-            console.log( 'failed to load module-title.json!' );
+          error: function (error) {
+            console.log('failed to load module-title.json!');
           }
         });
       }());
 
       // 插入模块标题
-      var insertModuleTitle = function ( data ) {
-        var moduleTitle = $( '.module .title .module-title' );
+      var insertModuleTitle = function (data) {
+        var moduleTitle = $('.module .title .module-title');
         var i = 0;
-        for ( var title in data.page['books'] ) {
-          $( $('.module')[i] ).find( '.title .module-title' ).html( data.page['books'] );
+        for (var title in data.page['books']) {
+          $($('.module')[i]).find('.title .module-title').html(data.page['books']);
           i++;
         }
       };
