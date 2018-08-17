@@ -7,9 +7,10 @@ var
   $cssLink   = $( 'head link.dynamic' )
   ;
 
+// 没问题之后再删掉
 // 初始化模块标题
 insertModuleTitle = $(function (){
-
+  return;
   // 请求模块标题模板
   $(function () {
     $.ajax({
