@@ -4,7 +4,6 @@ var insertModuleTitle = $(function() {
 	return;
 	// 请求模块标题模板
 	$(function() {
-
 		$.ajax({
 			type: "get",
 			url: "components/module-title/module-title.html",
