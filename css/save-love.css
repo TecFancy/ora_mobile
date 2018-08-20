@@ -41,24 +41,24 @@
 .module-01 .main .tabs {
     display: flex;
     justify-content: space-around;
-
-    padding-bottom: .11rem;
+    padding: .11rem .335rem;
 }
 .module-01 .main .tabs p {
+    width: 25%;
     height: .64rem;
     line-height: .64rem;
-
+    text-align: center;
     color: #415580;
 }
 .module-01 .main .tabs p.active {
     font-weight: bold;
 }
-.module-01 .main .tabs p:first-child {
+/* .module-01 .main .tabs p:first-child {
     padding-left: .335rem;
 }
 .module-01 .main .tabs p:last-child {
     padding-right: .335rem;
-}
+} */
 /** End module 01 area */
 
 
